@@ -1,3 +1,4 @@
+/* Preset values */
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +9,7 @@ html {
   box-sizing: border-box;
 }
 
+/* Navbar styles */
 nav {
   display: flex;
   flex-direction: row;
@@ -86,4 +88,44 @@ nav {
 .nav__dropdown__item:hover {
   background-color: black;
   color: whitesmoke;
+}
+
+/* Section Computing */
+
+/* Section Music */
+
+.thumbnails {
+  display: grid;
+  column-gap: 10px;
+  row-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  width: 90%;
+  margin: 10px auto;
+}
+
+.thumbnail {
+  width: 220px;
+  cursor: pointer;
+}
+
+.thumbnail img {
+  width: 220px;
+  height: auto;
+  object-fit: cover;
+}
+
+.selected__container {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+
+.selected {
+  width: 100%;
+  height: 88%;
+}
+
+.thumbnail__title,
+.selected__title {
+  text-align: center;
+  font-variant: small-caps;
 }

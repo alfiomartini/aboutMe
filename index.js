@@ -3,6 +3,7 @@ import { Music } from "./music.js";
 const music = new Music();
 
 const navDropdownMusic = document.querySelector(".nav__dropdown--music");
+const musicSection = document.getElementById("music");
 
 function navMusic(e) {
   const target = e.target;
@@ -12,3 +13,4 @@ function navMusic(e) {
 }
 
 navDropdownMusic.addEventListener("click", navMusic);
+musicSection.addEventListener("click", music.selectVideo.bind(music));
