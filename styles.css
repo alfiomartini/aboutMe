@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 20px;
+  align-items: baseline;
+}
+
+.nav__logo {
+  padding: 0px 10px;
+  font-size: 40px;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.nav__links {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav__item {
+  list-style-type: none;
+  position: relative;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: black;
+  padding: 8px 20px;
+  margin-right: 20px;
+  font-size: 18px;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+}
+
+.nav__link:hover {
+  background-color: black;
+  color: whitesmoke;
+}
+
+.nav__dropdown {
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  opacity: 0;
+  list-style-type: none;
+  text-align: left;
+  transition: opacity 0.3s;
+  width: 150px;
+  padding: 10px 10px;
+}
+
+.nav__link:hover ~ .nav__dropdown {
+  opacity: 1;
+}
+
+.nav__dropdown:hover {
+  opacity: 1;
+}
+
+.nav__dropdown--computing {
+  width: 210px;
+}
+
+.nav__dropdown--logic {
+  position: absolute;
+  width: 170px;
+  left: -50px;
+}
+
+.nav__dropdown__item {
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav__dropdown__item:hover {
+  background-color: black;
+  color: whitesmoke;
+}

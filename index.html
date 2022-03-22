@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI - Techniques</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./index.js" defer type="module"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__logo">About Me</div>
+      <ul class="nav__links">
+        <li class="nav__item">
+          <a class="nav__link" href="#computing">Computing</a>
+          <ul class="nav__dropdown nav__dropdown--computing">
+            <li class="nav__dropdown__item">Programming Languages</li>
+            <li class="nav__dropdown__item">Web Programming</li>
+            <li class="nav__dropdown__item">Front-End Programming</li>
+          </ul>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#music">Music</a>
+          <ul class="nav__dropdown nav__dropdown--music">
+            <li class="nav__dropdown__item" data-group="the cure">The Cure</li>
+            <li class="nav__dropdown__item" data-group="nicole cross">
+              Nicole Cross
+            </li>
+            <li class="nav__dropdown__item" data-group="new order">
+              New Order
+            </li>
+            <li class="nav__dropdown__item" data-group="costa mee">
+              Costa Mee
+            </li>
+          </ul>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#hobbies">Hobbies</a>
+          <ul class="nav__dropdown nav__dropdown--hobbies">
+            <li class="nav__dropdown__item">Reading</li>
+            <li class="nav__dropdown__item">Running</li>
+          </ul>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#logic">Logic</a>
+          <ul class="nav__dropdown nav__dropdown--logic">
+            <li class="nav__dropdown__item">Formal Verification</li>
+            <li class="nav__dropdown__item">Hoare Logic</li>
+            <li class="nav__dropdown__item">Category Theory</li>
+            <li class="nav__dropdown__item">Critical Thinking</li>
+            <li class="nav__dropdown__item">Theorem Proving</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <section id="music"></section>
+  </body>
+</html>
