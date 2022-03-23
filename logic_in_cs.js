@@ -1,4 +1,4 @@
-const texts = {
+const textsLogic = {
   overview: `
    I felt the need of having a solid background in Discrete Math and Logic for
    Computer Science in the early 90's, when I discovered two classics in the area: "Laws of Programming" (Tony Hoare) and "Formal Languages and their Relation to
@@ -43,3 +43,5 @@ const texts = {
   handwritten demonstrations and also a powerful collection of libraries to help in automating those proofs, keeping the necessity of human collaboration to a minimum (if you are a seasoned user).
   `,
 };
+
+export { textsLogic };

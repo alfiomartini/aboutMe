@@ -95,9 +95,48 @@ nav {
   color: whitesmoke;
 }
 
-/* Section Computing */
+/* Sections - General Settings */
+
+.section__heading {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+section {
+  margin: 20px 0;
+  border-bottom: 1px solid black;
+}
+
+/* Section WebDev */
 
 /* Section Music */
+
+.group__btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.group__btn {
+  width: 120px;
+  padding: 6px 12px;
+  background-color: darkslategray;
+  color: whitesmoke;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.group__btn:hover {
+  color: darkslategray;
+  background-color: whitesmoke;
+}
+
+.group__btn.active {
+  color: black;
+  background-color: lightslategray;
+  border: 1px solid black;
+}
 
 .thumbnails {
   display: grid;

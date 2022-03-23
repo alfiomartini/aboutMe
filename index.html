@@ -15,7 +15,7 @@
     <script src="./index.js" defer type="module"></script>
   </head>
   <body>
-    <nav>
+    <nav class="navbar">
       <div class="nav__logo">About Me</div>
       <ul class="nav__links">
         <li class="nav__item">
@@ -39,7 +39,7 @@
             <li class="nav__dropdown__item" data-group="nicole cross">
               Nicole Cross
             </li>
-            <li class="nav__dropdown__item" data-group="Wolfsheim">
+            <li class="nav__dropdown__item" data-group="wolfsheim">
               Wolfsheim
             </li>
             <li class="nav__dropdown__item" data-group="costa mee">
@@ -65,7 +65,42 @@
         </li>
       </ul>
     </nav>
-    <section id="computing"></section>
-    <section id="music" class="thumbnails"></section>
+    <section id="section__1" class="webdev">
+      <div class="section__heading">
+        <h2>Web Development</h2>
+      </div>
+      <div class="slider"></div>
+    </section>
+    <section id="section__2" class="music">
+      <div class="section__heading">
+        <h2>Music</h2>
+      </div>
+      <div class="group__btns">
+        <button
+          class="group__btn"
+          data-group="mental discipline music group the forgotten dreams empty make it worse"
+        >
+          Mental Discipline
+        </button>
+        <button class="group__btn" data-group="nicole cross">
+          Nicole Cross
+        </button>
+        <button class="group__btn" data-group="wolfsheim">Wolfsheim</button>
+        <button class="group__btn" data-group="costa mee">Costa Mee</button>
+      </div>
+      <div class="thumbnails"></div>
+    </section>
+    <section id="section__3" class="logic-in-cs">
+      <div class="section__heading">
+        <h2>Logic in Computer Science</h2>
+      </div>
+      <div class="slider"></div>
+    </section>
+    <section id="section__4" class="hobbies">
+      <div class="section__heading">
+        <h2>Hobbies</h2>
+      </div>
+      <div class="slider"></div>
+    </section>
   </body>
 </html>

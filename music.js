@@ -2,8 +2,9 @@ const Y2B_KEY = "AIzaSyB84APJ17MV7CujVm02jk-eYMFFiAM6nBk";
 const maxResults = 10;
 const API_URL = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=${maxResults}&type=video`;
 
-const navDropdownMusic = document.querySelector(".nav__dropdown--music");
-const musicSection = document.getElementById("music");
+const musicThumbnails = document.querySelector(".thumbnails");
+
+import { activateBtn } from "./utils.js";
 
 // prettier-ignore
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ]
@@ -16,18 +17,18 @@ class Music {
   }
 
   async youtube(group) {
-    this.group = group;
+    this.group = group.toLowerCase();
     const resp = await fetch(`${API_URL}&key=${Y2B_KEY}&q=${group}`);
     const data = await resp.json();
-    console.log(data);
     this.videos = data.items;
     this.selected = this.videos[0];
     this.renderThumbnails();
     this.renderSelected();
+    const btn = document.querySelector(`button[data-group*="${this.group}"]`);
+    activateBtn(btn);
   }
 
   selectVideo(e) {
-    console.log("event", e.target, this);
     const videoId = e.target.closest(".thumbnail").dataset.id;
     this.selected = this.videos.find((video) => video.id.videoId === videoId);
     this.renderSelected();
@@ -36,7 +37,6 @@ class Music {
   renderSelected() {
     const iframeElem = document.querySelector(".selected__container");
     if (iframeElem) iframeElem.remove();
-    // console.log("selected", this.selected);
     const videoId = this.selected.id.videoId;
     const title = this.selected.snippet.title;
     const publishedAt = this.selected.snippet.publishedAt;
@@ -50,12 +50,12 @@ class Music {
         </iframe>
         <div class="selected__title">${title} - ${publicationDate}</div>
       </div>`;
-    musicSection.insertAdjacentHTML("afterbegin", html);
+    musicThumbnails.insertAdjacentHTML("afterbegin", html);
   }
 
   renderThumbnails() {
     const maxTitleSize = 30;
-    musicSection.innerHTML = "";
+    musicThumbnails.innerHTML = "";
     const thumbImages = this.videos.map((video) => {
       let title = video.snippet.title;
       title = title.slice(0, maxTitleSize) + "...";
@@ -65,7 +65,7 @@ class Music {
       </div>`;
     });
     thumbImages.forEach((img) =>
-      musicSection.insertAdjacentHTML("beforeend", img)
+      musicThumbnails.insertAdjacentHTML("beforeend", img)
     );
   }
 }

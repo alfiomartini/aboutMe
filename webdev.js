@@ -1,4 +1,4 @@
-const texts = {
+const textsWebDev = {
   overview: `
     I started with web development by pure chance in the beginning of 2020.
     Learned the basics of Python and used Flask to build my first web sites.
@@ -39,3 +39,5 @@ const texts = {
     Vue or Angular).
   `,
 };
+
+export { textsWebDev };
