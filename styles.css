@@ -9,6 +9,11 @@ html {
   box-sizing: border-box;
 }
 
+/* global variables */
+:root {
+  --width-thumbnail: 220px;
+}
+
 /* Navbar styles */
 nav {
   display: flex;
@@ -98,18 +103,19 @@ nav {
   display: grid;
   column-gap: 10px;
   row-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(var(--width-thumbnail), 1fr));
   width: 90%;
   margin: 10px auto;
 }
 
 .thumbnail {
-  width: 220px;
+  width: var(--width-thumbnail);
   cursor: pointer;
 }
 
 .thumbnail img {
-  width: 220px;
+  width: var(--width-thumbnail);
+  /* width:100% */
   height: auto;
   object-fit: cover;
 }
