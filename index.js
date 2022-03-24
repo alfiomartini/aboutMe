@@ -12,7 +12,8 @@ const btnsContainer = document.querySelector(".group__btns");
 // const btn = document.querySelector("button[data-group*='nicole cross']");
 // console.log("chose btn", btn);
 
-function navMusic(e) {
+function navMusicDropdown(e) {
+  e.stopPropagation(); // avoids going into musicSection element
   const target = e.target;
   setGroup(target.dataset.group);
   music.youtube(getGroup());
@@ -22,19 +23,23 @@ function navMusic(e) {
 const [getGroup, setGroup] = stateHook(null);
 if (getGroup()) music.youtube(getGroup());
 
-// using delegation
+// using delegation - smooth scrolling
 navbar.addEventListener("click", function (e) {
-  // console.log(e.target);
-  const section = e.target.href;
+  e.preventDefault();
+  let href = e.target.href;
+  const index = href.indexOf("#");
+  href = href.slice(index);
+  const section = document.querySelector(href);
+  section.scrollIntoView({ behavior: "smooth" });
 });
 
-// using delegation
-navDropdownMusic.addEventListener("click", navMusic);
+// using delegation - gets song's list using dropdown menu
+navDropdownMusic.addEventListener("click", navMusicDropdown);
 
 // using delegation
 musicSection.addEventListener("click", music.selectVideo.bind(music));
 
-// using delegation
+// using delegation - get song's list using btns
 btnsContainer.addEventListener("click", function (e) {
   // stop here to avoid reaching listener in 'musicSection'
   e.stopPropagation();
