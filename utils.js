@@ -1,7 +1,7 @@
 import { textsWebDev } from "./webdev.js";
 import { textsLogic } from "./logic_in_cs.js";
 
-function getSlideHTML(title, text, index) {
+function getSlideHTML(title, text, index, image) {
   return `
     <div class="slide slide--${index}">
       <div class="testimonial">
@@ -9,6 +9,7 @@ function getSlideHTML(title, text, index) {
           ${title}
         </h5>
         <div class="testimonial__text">
+          <img src="${image}" alt="image" />
           ${text}
         </div>
       </div>
@@ -35,12 +36,13 @@ function activateGroupBtn(btn) {
 
 function initDevGallery(selector) {
   const slider = document.querySelector(`.slider.${selector}`);
-  let texts;
-  if (selector === "webdev") texts = textsWebDev;
-  if (selector === "logic-in-cs") texts = textsLogic;
-  Object.entries(texts).forEach((entry, index) => {
+  let content;
+  if (selector === "webdev") content = textsWebDev;
+  if (selector === "logic-in-cs") content = textsLogic;
+  const { readme, images } = content;
+  Object.entries(readme).forEach((entry, index) => {
     const [title, text] = entry;
-    const html = getSlideHTML(title, text, index);
+    const html = getSlideHTML(title, text, index, images[index]);
     slider.insertAdjacentHTML("beforeend", html);
   });
   const btnLeft = `<button class="slider__btn slider__btn--left ${selector}">

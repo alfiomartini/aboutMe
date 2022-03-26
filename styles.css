@@ -151,6 +151,14 @@ section {
   line-height: 1.6;
 }
 
+.testimonial__text img {
+  width: 100px;
+  height: 80px;
+  float: left;
+  object-fit: cover;
+  margin: 10px 10px;
+}
+
 .slider__btn {
   position: absolute;
   top: 50%;

@@ -9,10 +9,6 @@ const navDropdownMusic = document.querySelector(".nav__dropdown--music");
 const musicSection = document.querySelector(".music");
 const btnsContainer = document.querySelector(".group__btns");
 
-// testing btn selection;
-// const btn = document.querySelector("button[data-group*='nicole cross']");
-// console.log("chose btn", btn);
-
 function navMusicDropdown(e) {
   e.stopPropagation(); // avoids going into musicSection element
   const target = e.target;
