@@ -52,55 +52,59 @@ btnsContainer.addEventListener("click", function (e) {
 });
 
 // slides
-// const [currSlide, setCurrSlide] = stateHook(0);
-let currSlide = 0;
 function gotoSlide(slides, slideNum) {
   slides.forEach((slide, index) => {
     slide.style.transform = `translateX(${(index - slideNum) * 200}%)`;
   });
 }
 
-function updateLeftSlide(slides) {
-  currSlide--;
-  if (currSlide === -1) currSlide = slides.length - 1;
-  gotoSlide(slides, currSlide);
+function updateLeftSlide(slides, getSlide, setSlide) {
+  let current = getSlide();
+  setSlide(--current);
+  if (getSlide() === -1) setSlide(slides.length - 1);
+  gotoSlide(slides, getSlide());
 }
 
-function updateRightSlide(slides) {
-  currSlide++;
-  if (currSlide === slides.length) currSlide = 0;
-  gotoSlide(slides, currSlide);
+function updateRightSlide(slides, getSlide, setSlide) {
+  let current = getSlide();
+  setSlide(++current);
+  if (getSlide() === slides.length) setSlide(0);
+  gotoSlide(slides, getSlide());
 }
 // initialize Webdev Slide Galleries
+const [currSlideWeb, setSlideWeb] = stateHook(0);
+
 initDevGallery("webdev");
 //  get slides
 const webdevSlides = getSlides("webdev");
-gotoSlide(webdevSlides, currSlide);
+gotoSlide(webdevSlides, currSlideWeb());
 
 const webBtnLeft = getBtnLeft("webdev");
 const webBtnRight = getBtnRight("webdev");
 
 webBtnLeft.addEventListener("click", () => {
-  updateLeftSlide(webdevSlides);
+  updateLeftSlide(webdevSlides, currSlideWeb, setSlideWeb);
 });
 
 webBtnRight.addEventListener("click", () => {
-  updateRightSlide(webdevSlides);
+  updateRightSlide(webdevSlides, currSlideWeb, setSlideWeb);
 });
 
 // initialize Logic Slide Galleries
+const [currSlideLogic, setSlideLogic] = stateHook(0);
+
 initDevGallery("logic-in-cs");
 //  get slides
 const logicSlides = getSlides("logic-in-cs");
-gotoSlide(logicSlides, currSlide);
+gotoSlide(logicSlides, currSlideLogic());
 
 const logicBtnLeft = getBtnLeft("logic-in-cs");
 const logicBtnRight = getBtnRight("logic-in-cs");
 
 logicBtnLeft.addEventListener("click", () => {
-  updateLeftSlide(logicSlides);
+  updateLeftSlide(logicSlides, currSlideLogic, setSlideLogic);
 });
 
 logicBtnRight.addEventListener("click", () => {
-  updateRightSlide(logicSlides);
+  updateRightSlide(logicSlides, currSlideLogic, setSlideLogic);
 });
