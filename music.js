@@ -4,7 +4,7 @@ const API_URL = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxRe
 
 const musicThumbnails = document.querySelector(".thumbnails");
 
-import { activateBtn } from "./utils.js";
+import { activateGroupBtn } from "./utils.js";
 
 // prettier-ignore
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ]
@@ -25,7 +25,7 @@ class Music {
     this.renderThumbnails();
     this.renderSelected();
     const btn = document.querySelector(`button[data-group*="${this.group}"]`);
-    activateBtn(btn);
+    activateGroupBtn(btn);
   }
 
   selectVideo(e) {

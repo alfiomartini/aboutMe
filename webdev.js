@@ -9,8 +9,7 @@ const textsWebDev = {
     But I cannot emphasize enough that the real foundation for any web developer is the
     triad HTML - CSS - JavaScript.
   `,
-  flask: `I started experimenting with development 
-  in the beginning of 2020 with Flask, while taking
+  flask: `I started using Flask while taking
   a CS50 course at Harvard. I strongly recommend this
   framework for everyone interested in starting web
   programming in general. Flask is a small and lightweight 
@@ -19,7 +18,7 @@ const textsWebDev = {
   flexibility and is a more accessible framework for new developers since you 
   can build a web application quickly using only a single Python file. 
   Frontend programming can be done using a specific template language that
-  makes easy to generated dynamic HTML pages.
+  makes easy to generate dynamic HTML pages.
   `,
   django: `Like Flask, Django is a Python-based free and open-source web framework that follows (loosely) the model–template–views (MTV) architectural pattern. However, Django
   requires more technical experience and maturity with Python than Flask. I began using 

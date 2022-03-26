@@ -1,5 +1,6 @@
 import { Music } from "./music.js";
-import { activateBtn, stateHook } from "./utils.js";
+import { activateGroupBtn, getSlides, stateHook } from "./utils.js";
+import { initDevGallery, getBtnLeft, getBtnRight } from "./utils.js";
 
 const music = new Music();
 
@@ -44,8 +45,45 @@ btnsContainer.addEventListener("click", function (e) {
   // stop here to avoid reaching listener in 'musicSection'
   e.stopPropagation();
   const btn = e.target;
-  activateBtn(btn);
+  activateGroupBtn(btn);
   const group = btn.dataset.group;
   setGroup(group);
   music.youtube(getGroup());
+});
+
+// slides
+// const [currSlide, setCurrSlide] = stateHook(0);
+let currSlide = 0;
+function gotoSlide(slides, slideNum) {
+  slides.forEach((slide, index) => {
+    slide.style.transform = `translateX(${(index - slideNum) * 200}%)`;
+  });
+}
+
+function updateLeftSlide(slides) {
+  currSlide--;
+  if (currSlide === -1) currSlide = slides.length - 1;
+  gotoSlide(slides, currSlide);
+}
+
+function updateRightSlide(slides) {
+  currSlide++;
+  if (currSlide === slides.length) currSlide = 0;
+  gotoSlide(slides, currSlide);
+}
+// initialize Webdev Slide Galleries
+initDevGallery("webdev");
+//  get slides
+const webdevSlides = getSlides("webdev");
+gotoSlide(webdevSlides, currSlide);
+
+const webBtnLeft = getBtnLeft("webdev");
+const webBtnRight = getBtnRight("webdev");
+
+webBtnLeft.addEventListener("click", () => {
+  updateLeftSlide(webdevSlides);
+});
+
+webBtnRight.addEventListener("click", () => {
+  updateRightSlide(webdevSlides);
 });
