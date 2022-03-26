@@ -87,3 +87,20 @@ webBtnLeft.addEventListener("click", () => {
 webBtnRight.addEventListener("click", () => {
   updateRightSlide(webdevSlides);
 });
+
+// initialize Logic Slide Galleries
+initDevGallery("logic-in-cs");
+//  get slides
+const logicSlides = getSlides("logic-in-cs");
+gotoSlide(logicSlides, currSlide);
+
+const logicBtnLeft = getBtnLeft("logic-in-cs");
+const logicBtnRight = getBtnRight("logic-in-cs");
+
+logicBtnLeft.addEventListener("click", () => {
+  updateLeftSlide(logicSlides);
+});
+
+logicBtnRight.addEventListener("click", () => {
+  updateRightSlide(logicSlides);
+});

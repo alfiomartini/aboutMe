@@ -1,4 +1,5 @@
 import { textsWebDev } from "./webdev.js";
+import { textsLogic } from "./logic_in_cs.js";
 
 function getSlideHTML(title, text, index) {
   return `
@@ -34,7 +35,10 @@ function activateGroupBtn(btn) {
 
 function initDevGallery(selector) {
   const slider = document.querySelector(`.slider.${selector}`);
-  Object.entries(textsWebDev).forEach((entry, index) => {
+  let texts;
+  if (selector === "webdev") texts = textsWebDev;
+  if (selector === "logic-in-cs") texts = textsLogic;
+  Object.entries(texts).forEach((entry, index) => {
     const [title, text] = entry;
     const html = getSlideHTML(title, text, index);
     slider.insertAdjacentHTML("beforeend", html);
