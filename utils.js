@@ -53,6 +53,13 @@ function initDevGallery(selector) {
   </button>`;
   slider.insertAdjacentHTML("beforeend", btnLeft);
   slider.insertAdjacentHTML("beforeend", btnRight);
+  const dots = document.createElement("div");
+  dots.classList.add("dots", `${selector}`);
+  Object.entries(readme).forEach((_, index) => {
+    const btn = `<button class="dots__dot ${selector}" data-slide="${index}"></button>`;
+    dots.insertAdjacentHTML("beforeend", btn);
+  });
+  slider.append(dots);
 }
 
 function getBtnLeft(selector) {

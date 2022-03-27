@@ -6,20 +6,19 @@ const textsLogic = {
     Automata" (Hopcroft & Hullmann, 1969). Later on, I had the same experience
     with Category Theory. Discrete Math, Logic and Category Theory were languages needed
     if you wanted access to the classics.   A lot of Category theory theory can be grasped and experimented in a practical way if you enjoy Functional Programming.
-    For programmers interested in Category Theory, there is "Categories for Programmers"
-    (Bartosz Milewski) and if you are a JavaScript Software Developer, there is the excellent "Composing Software" (Eric Elliot). For the practical programmer, the
+    For the working programmer, the
     need for logic arises when writing assertions before and after the execution of
     any program fragment, usually called pre and post-conditions or Hoare triples.
     You can use testing to see if these conditions are met in some cases, proofs if
     they are met in all cases. And if you want a machine to help you with these proof,
-    then you just found out the are of Theorem Proving.
+    then you just found out the need of Theorem Proving.
     `,
     ["Category Theory"]: `
       In its simplest form, Category Theory can be understood as a logic of functions
       and composition of functions. Thus it has a lot to do with Functional Programming
       and Higher Order functions. It the 90's it was used heavily in Computer Science
       as a tool for semantics of computation, but more recently found its way in the
-      practice of thw working programmer or working software developer. See "Categories for Programmers" (Bartosz Milewski) and "Composing Software" with JavaScript (Eric Elliot). Eric Elliot emphasizes that the essence of Software Development is composition and introduces in its book a great collection of functional programming and categorical tools for the modern software developer.
+      practice of thw working programmer or working software developer. For instance,  "Categories for Programmers" (Bartosz Milewski) and "Composing Software" with JavaScript (Eric Elliot). Eric Elliot emphasizes that the essence of Software Development is composition and introduces in his book a great collection of functional programming and categorical tools for the modern software developer.
     `,
     ["Hoare Logic"]: `
       I have taught Hoare Logic in the university for a number of years. I also

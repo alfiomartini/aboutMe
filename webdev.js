@@ -8,7 +8,7 @@ const textsWebDev = {
     those much needed (div) containers wrappers.CSS grids are one of the most powerful and useful concepts for frontend programmers. It also took me a lot of effort
     to use efficiently promises and async functions. You hear it and read it everywhere.
     But I cannot emphasize enough that the real foundation for any web developer is the
-    triad HTML - CSS - JavaScript.
+    triad HTML/CSS/JavaScript.
     `,
     Flask: `I started using Flask while taking
     a CS50 course at Harvard. I strongly recommend this
@@ -17,7 +17,7 @@ const textsWebDev = {
     since you 
     can build a web application quickly using only a single Python file. 
     Frontend programming can be done using a specific template language that
-    makes easy to generate dynamic HTML pages. However, in order to proper understand how Flask works, requires a solid knowledge of object oriented programming and decorators in Python.
+    makes easy to generate dynamic HTML pages. However, in order to proper understand how Flask works, you need a solid knowledge of object oriented programming and decorators in Python.
     `,
     Django: `Like Flask, Django is a Python-based free and open-source web framework that follows (loosely) the model–template–views (MTV) architectural pattern. However, Django
     requires more technical experience and maturity with Python than Flask. I began using 

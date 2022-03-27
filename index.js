@@ -67,6 +67,15 @@ function updateRightSlide(slides, getSlide, setSlide) {
   if (getSlide() === slides.length) setSlide(0);
   gotoSlide(slides, getSlide());
 }
+
+// update dots
+function updateDot(slideNum, selector) {
+  const dots = document.querySelectorAll(`.dots__dot.${selector}`);
+  dots.forEach((dot, index) => {
+    if (slideNum === index) dot.classList.add("dots__dot--active");
+    else dot.classList.remove("dots__dot--active");
+  });
+}
 // initialize Webdev Slide Galleries
 const [currSlideWeb, setSlideWeb] = stateHook(0);
 
@@ -74,16 +83,19 @@ initDevGallery("webdev");
 //  get slides
 const webdevSlides = getSlides("webdev");
 gotoSlide(webdevSlides, currSlideWeb());
+updateDot(currSlideWeb(), "webdev");
 
 const webBtnLeft = getBtnLeft("webdev");
 const webBtnRight = getBtnRight("webdev");
 
 webBtnLeft.addEventListener("click", () => {
   updateLeftSlide(webdevSlides, currSlideWeb, setSlideWeb);
+  updateDot(currSlideWeb(), "webdev");
 });
 
 webBtnRight.addEventListener("click", () => {
   updateRightSlide(webdevSlides, currSlideWeb, setSlideWeb);
+  updateDot(currSlideWeb(), "webdev");
 });
 
 // initialize Logic Slide Galleries
@@ -93,14 +105,17 @@ initDevGallery("logic-in-cs");
 //  get slides
 const logicSlides = getSlides("logic-in-cs");
 gotoSlide(logicSlides, currSlideLogic());
+updateDot(currSlideWeb(), "logic-in-cs");
 
 const logicBtnLeft = getBtnLeft("logic-in-cs");
 const logicBtnRight = getBtnRight("logic-in-cs");
 
 logicBtnLeft.addEventListener("click", () => {
   updateLeftSlide(logicSlides, currSlideLogic, setSlideLogic);
+  updateDot(currSlideLogic(), "logic-in-cs");
 });
 
 logicBtnRight.addEventListener("click", () => {
   updateRightSlide(logicSlides, currSlideLogic, setSlideLogic);
+  updateDot(currSlideLogic(), "logic-in-cs");
 });
