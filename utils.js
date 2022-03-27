@@ -1,5 +1,6 @@
 import { textsWebDev } from "./webdev.js";
 import { textsLogic } from "./logic_in_cs.js";
+import { hobbies } from "./hobbies.js";
 
 function getSlideHTML(title, text, index, image) {
   return `
@@ -34,7 +35,33 @@ function activateGroupBtn(btn) {
   btn.classList.add("active");
 }
 
-function initDevGallery(selector) {
+function initHobbiesGallery() {
+  const slider = document.querySelector(`.slider.hobbies`);
+  hobbies.forEach((hobby, index) => {
+    const { image, text } = hobby;
+    const slide = `<div class="slide hobbies">
+      <img src="${image}" alt="Photo-${index}">
+    </div>`;
+    slider.insertAdjacentHTML("beforeend", slide);
+  });
+  const btnLeft = `<button class="slider__btn slider__btn--left hobbies">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>`;
+  const btnRight = `<button class="slider__btn slider__btn--right hobbies">
+     <i class="fa-solid fa-arrow-right"></i>
+  </button>`;
+  slider.insertAdjacentHTML("beforeend", btnLeft);
+  slider.insertAdjacentHTML("beforeend", btnRight);
+  const dots = document.createElement("div");
+  dots.classList.add("dots", "hobbies");
+  Object.entries(hobbies).forEach((_, index) => {
+    const btn = `<button class="dots__dot hobbies" data-slide="${index}"></button>`;
+    dots.insertAdjacentHTML("beforeend", btn);
+  });
+  slider.append(dots);
+}
+
+function initTextGallery(selector) {
   const slider = document.querySelector(`.slider.${selector}`);
   let content;
   if (selector === "webdev") content = textsWebDev;
@@ -78,8 +105,9 @@ function getSlides(selector) {
 export {
   stateHook,
   activateGroupBtn,
-  initDevGallery,
+  initTextGallery,
   getSlides,
   getBtnLeft,
   getBtnRight,
+  initHobbiesGallery,
 };

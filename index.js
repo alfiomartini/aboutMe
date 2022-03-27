@@ -1,6 +1,7 @@
 import { Music } from "./music.js";
 import { activateGroupBtn, getSlides, stateHook } from "./utils.js";
-import { initDevGallery, getBtnLeft, getBtnRight } from "./utils.js";
+import { initTextGallery, getBtnLeft, getBtnRight } from "./utils.js";
+import { initHobbiesGallery } from "./utils.js";
 
 const music = new Music();
 
@@ -79,7 +80,7 @@ function updateDot(slideNum, selector) {
 // initialize Webdev Slide Galleries
 const [currSlideWeb, setSlideWeb] = stateHook(0);
 
-initDevGallery("webdev");
+initTextGallery("webdev");
 //  get slides
 const webdevSlides = getSlides("webdev");
 gotoSlide(webdevSlides, currSlideWeb());
@@ -101,7 +102,7 @@ webBtnRight.addEventListener("click", () => {
 // initialize Logic Slide Galleries
 const [currSlideLogic, setSlideLogic] = stateHook(0);
 
-initDevGallery("logic-in-cs");
+initTextGallery("logic-in-cs");
 //  get slides
 const logicSlides = getSlides("logic-in-cs");
 gotoSlide(logicSlides, currSlideLogic());
@@ -118,4 +119,26 @@ logicBtnLeft.addEventListener("click", () => {
 logicBtnRight.addEventListener("click", () => {
   updateRightSlide(logicSlides, currSlideLogic, setSlideLogic);
   updateDot(currSlideLogic(), "logic-in-cs");
+});
+
+// initialize Logic Slide Galleries
+const [currSlideHobbies, setSlideHobbies] = stateHook(0);
+
+initHobbiesGallery();
+//  get slides
+const hobbiesSlides = getSlides("hobbies");
+gotoSlide(hobbiesSlides, currSlideHobbies());
+updateDot(currSlideHobbies(), "hobbies");
+
+const hobbiesBtnLeft = getBtnLeft("hobbies");
+const hobbiesBtnRight = getBtnRight("hobbies");
+
+hobbiesBtnLeft.addEventListener("click", () => {
+  updateLeftSlide(hobbiesSlides, currSlideHobbies, setSlideHobbies);
+  updateDot(currSlideHobbies(), "hobbies");
+});
+
+hobbiesBtnRight.addEventListener("click", () => {
+  updateRightSlide(hobbiesSlides, currSlideHobbies, setSlideHobbies);
+  updateDot(currSlideHobbies(), "hobbies");
 });
