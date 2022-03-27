@@ -35,10 +35,10 @@ const textsWebDev = {
     `,
   },
   images: [
-    "./images/web_dev.jpg",
+    "./images/web_programming.jpg",
     "./images/flask.png",
     "./images/django.png",
-    "./images/react.png",
+    "./images/react.jpg",
   ],
 };
 

@@ -36,8 +36,8 @@ const textsLogic = {
   },
   images: [
     "./images/logic_in_cs.jpg",
-    "./images/category_theory.png",
-    "./images/hoare_logic.jpg",
+    "./images/category_programmers.jpg",
+    "./images/hoare_logic.png",
     "./images/isabelle.jpg",
   ],
 };
