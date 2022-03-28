@@ -69,21 +69,21 @@ nav {
 }
 
 .nav__link:hover {
-  background-color: var(--color-background2);
+  background-color: var(--body-background-color);
   color: whitesmoke;
 }
 
 .nav__dropdown {
   position: absolute;
-  top: 20px;
+  top: 30px;
   left: 5px;
   opacity: 0;
   list-style-type: none;
   text-align: left;
   transition: opacity 0.3s;
-  width: 150px;
+  width: 180px;
   padding: 10px 10px;
-  background-color: var(--color-background2);
+  background-color: var(--navbar-background-color);
   color: whitesmoke;
   z-index: 1;
 }
@@ -248,25 +248,26 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 .group__btn {
   width: 120px;
   padding: 6px 12px;
-  background-color: darkslategray;
+  background-color: var(--navbar-background-color);
   color: whitesmoke;
   border-radius: 10px;
   margin-right: 20px;
 }
 
 .group__btn:hover {
-  color: darkslategray;
-  background-color: whitesmoke;
+  color: var(--navbar-background-color);
+  background-color: lightgreen;
 }
 
 .group__btn.active {
-  color: black;
-  background-color: lightslategray;
+  color: lightgreen;
+  background-color: var(--navbar-background-color);
   border: 1px solid black;
 }
 
