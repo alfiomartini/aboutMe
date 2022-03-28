@@ -142,3 +142,14 @@ hobbiesBtnRight.addEventListener("click", () => {
   updateRightSlide(hobbiesSlides, currSlideHobbies, setSlideHobbies);
   updateDot(currSlideHobbies(), "hobbies");
 });
+
+// take care of number of videos:
+
+// window.addEventListener("resize", () => {
+//   const width = window.innerWidth;
+//   if (width <= 650) {
+//     music.setMaxVideos(5);
+//   } else {
+//     music.setMaxVideos(10);
+//   }
+// });
