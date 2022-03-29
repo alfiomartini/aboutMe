@@ -18,7 +18,7 @@ function navMusicDropdown(e) {
 }
 
 // initialize music section
-const [getGroup, setGroup] = stateHook("nicole cross");
+const [getGroup, setGroup] = stateHook(null);
 if (getGroup()) music.youtube(getGroup());
 
 // using delegation - smooth scrolling
