@@ -143,13 +143,8 @@ hobbiesBtnRight.addEventListener("click", () => {
   updateDot(currSlideHobbies(), "hobbies");
 });
 
-// take care of number of videos:
-
-// window.addEventListener("resize", () => {
-//   const width = window.innerWidth;
-//   if (width <= 650) {
-//     music.setMaxVideos(5);
-//   } else {
-//     music.setMaxVideos(10);
-//   }
-// });
+// goto top when page (re)loads:
+const body = document.querySelector("body");
+window.addEventListener("DOMContentLoaded", () => {
+  body.scrollIntoView({ behavior: "smooth" });
+});

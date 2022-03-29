@@ -38,6 +38,9 @@ nav {
   align-items: center;
   background-color: var(--navbar-background-color);
   color: var(--navbar-link-color);
+  position: sticky;
+  top: 10px;
+  z-index: 2;
 }
 
 .nav__logo {
@@ -109,7 +112,7 @@ nav {
 
 .nav__dropdown__item:hover {
   background-color: whitesmoke;
-  color: var(--color-background2);
+  color: var(--body-background-color);
 }
 
 /* Sections - General Settings */
