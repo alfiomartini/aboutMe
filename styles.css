@@ -132,7 +132,7 @@ section {
 /* slides in general */
 
 .slider {
-  width: 80%;
+  width: 60%;
   position: relative;
   margin: 0 auto;
   /* this is important, since absolute elements do no take any space */
