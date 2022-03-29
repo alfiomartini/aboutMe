@@ -18,7 +18,7 @@ html {
   --navbar-link-color: rgba(255, 255, 255, 0.5);
   --text-background-color: #343a40;
   --text-heading-color: lightblue;
-  --section-color: lightgreen;
+  --section-color: whitesmoke;
   --slider-btn-background-color: #343a40;
   --dots-background-color: #343a40;
   --dots-active-background-color: lightgreen;
@@ -127,6 +127,7 @@ section {
   justify-content: center;
   margin: 30px 0;
   color: var(--section-color);
+  text-transform: capitalize;
 }
 
 /* slides in general */
@@ -235,7 +236,7 @@ section {
 }
 
 .dots__dot--active {
-  /* opacity: 0.7; */
+  opacity: 0.7;
   background-color: var(--dots-active-background-color);
   color: var(--dots-background-color);
 }
@@ -334,6 +335,10 @@ footer {
 }
 
 @media (max-width: 750px) {
+  .section__heading {
+    font-size: 14px;
+  }
+
   .nav__logo {
     display: none;
   }
@@ -396,6 +401,11 @@ footer {
 }
 
 @media (max-width: 590px) {
+  .dots__dot {
+    width: 10px;
+    height: 10px;
+  }
+
   .slider {
     width: 90%;
     height: 300px;
