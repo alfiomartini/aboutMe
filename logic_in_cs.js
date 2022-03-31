@@ -10,7 +10,7 @@ const textsLogic = {
     need for logic arises when writing assertions before and after the execution of
     any program fragment, usually called pre and post-conditions or Hoare triples.
     You can use testing to see if these conditions are met in some cases, proofs if
-    they are met in all cases. And if you want a machine to help you with these proof,
+    they are met in all cases. And if you want a machine to help you with these proofs,
     then you just found out the need of Theorem Proving.
     `,
     ["Category Theory"]: `
