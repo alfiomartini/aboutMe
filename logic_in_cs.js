@@ -18,7 +18,7 @@ const textsLogic = {
       and composition of functions. Thus it has a lot to do with Functional Programming
       and Higher Order functions. In the 90's it was used heavily in Computer Science
       as a tool for the semantics of computation, but more recently it found its way in the
-      practice of the working programmer or in the life of the working software developer. "Categories for Programmers" (Bartosz Milewski) and "Composing Software" with JavaScript (Eric Elliot) are excellent references. Eric Elliot, for instance,  emphasizes that the essence of Software Development is composition and introduces in his book a great collection of functional programming and categorical tools for the modern software developer.
+      practice of the working programmer or in the life of the working software developer. "Categories for Programmers" (Bartosz Milewski) and "Composing Software" with JavaScript (Eric Elliot) are excellent references. Eric Elliot, for instance,  emphasizes that the essence of Software Development is composition and introduces in his book a great collection of functional programming and categorical tools for the modern web software developer.
     `,
     ["Hoare Logic"]: `
       I have taught Hoare Logic in the university for a number of years. I also
