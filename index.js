@@ -51,7 +51,7 @@ btnsContainer.addEventListener("click", function (e) {
 // slides
 function gotoSlide(slides, slideNum) {
   slides.forEach((slide, index) => {
-    slide.style.transform = `translateX(${(index - slideNum) * 200}%)`;
+    slide.style.transform = `translateX(${(index - slideNum) * 100}%)`;
   });
 }
 
@@ -59,7 +59,7 @@ function updateLeftSlide(slides, getSlide, setSlide) {
   let current = getSlide();
   setSlide(--current);
   if (getSlide() === -1) setSlide(slides.length - 1);
-  gotoSlide(slides, getSlide());
+  gotoSlide(current, getSlide());
 }
 
 function updateRightSlide(slides, getSlide, setSlide) {
