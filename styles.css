@@ -27,7 +27,6 @@ html {
 body {
   padding: 20px;
   background-color: var(--body-background-color);
-  overflow-x: hidden;
 }
 
 /* Navbar styles */
