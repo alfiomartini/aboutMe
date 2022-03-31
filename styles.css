@@ -211,12 +211,12 @@ section {
 }
 
 .slider__btn--left {
-  transform: translate(100%, -50%);
+  transform: translate(120%, -50%);
   left: -5%;
 }
 
 .slider__btn--right {
-  transform: translate(-100%, -50%);
+  transform: translate(-120%, -50%);
   right: -5%;
 }
 
