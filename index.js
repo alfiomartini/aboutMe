@@ -59,7 +59,7 @@ function updateLeftSlide(slides, getSlide, setSlide) {
   let current = getSlide();
   setSlide(--current);
   if (getSlide() === -1) setSlide(slides.length - 1);
-  gotoSlide(current, getSlide());
+  gotoSlide(slides, getSlide());
 }
 
 function updateRightSlide(slides, getSlide, setSlide) {
@@ -88,6 +88,7 @@ updateDot(currSlideWeb(), "webdev");
 
 const webBtnLeft = getBtnLeft("webdev");
 const webBtnRight = getBtnRight("webdev");
+// console.log(webBtnLeft, webBtnRight);
 
 webBtnLeft.addEventListener("click", () => {
   updateLeftSlide(webdevSlides, currSlideWeb, setSlideWeb);
@@ -127,6 +128,7 @@ const [currSlideHobbies, setSlideHobbies] = stateHook(0);
 initHobbiesGallery();
 //  get slides
 const hobbiesSlides = getSlides("hobbies");
+// console.log(hobbiesSlides);
 gotoSlide(hobbiesSlides, currSlideHobbies());
 updateDot(currSlideHobbies(), "hobbies");
 
