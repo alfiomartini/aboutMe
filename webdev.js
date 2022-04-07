@@ -4,7 +4,7 @@ const textsWebDev = {
     I started with web development by pure chance in the beginning of 2020.
     Learned the basics of Python and used Flask to build my first web sites.
     It was a very smooth beginning but I struggled a lot with CSS, especially
-    when I first met the need to work layout properties, like float, flex and grid. You need a working knowledge of HTML to use well 
+    when I first met the need to work layout properties like float, flex and grid. You need a working knowledge of HTML to use well 
     those much needed containers. CSS grids are one of the most powerful and useful concepts for frontend programmers. It also took me a lot of effort
     to use naturally async functions. The need for them arises everywhere.
     But I cannot emphasize enough that the real foundation for any web developer is the
