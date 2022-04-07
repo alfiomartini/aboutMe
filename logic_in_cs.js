@@ -5,7 +5,7 @@ const textsLogic = {
     Computer Science in the early 90's, when I discovered two classics in the area: "Laws of Programming" (Tony Hoare) and "Formal Languages and their Relation to
     Automata" (Hopcroft & Hullmann, 1969). Later on, I had the same experience
     with Category Theory. Discrete Math, Logic and Category Theory were languages needed
-    if you wanted access to the classics.   A lot of Category theory theory can be grasped and experimented in a practical way if you enjoy Functional Programming.
+    if you wanted access to the classics.   A lot of Category theory can be grasped and experimented in a practical way if you enjoy Functional Programming.
     For the working programmer, the
     need for logic arises when writing assertions before and after the execution of
     any program fragment, usually called pre and post-conditions or Hoare triples.
