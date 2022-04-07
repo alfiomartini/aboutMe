@@ -22,7 +22,7 @@ const textsWebDev = {
     Django: `Like Flask, Django is a Python-based free and open-source web framework that follows (loosely) the model–template–views (MTV) architectural pattern. However, Django
     requires more technical experience and maturity with Python than Flask. I began using 
     it in the second half of 2020 and I quick realize that you have to be confident with
-    object oriented programming, higher order programming and query sets in Python to feel comfortable with this framework. A basic knowledge of regular expressions is also helpful. There
+    object oriented programming, higher order programming and query sets in Python to feel comfortable with this framework. A basic knowledge of regular expressions is also helpful as well. There
     is also quite a lot of boilerplate code to generate before you even start coding your first routes and views. On the other hand,  creation of database models is much easier than in other frameworks.
     `,
     React: `
