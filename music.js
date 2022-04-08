@@ -13,8 +13,8 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 class Music {
   constructor(group = "") {
     this.group = group;
-    this.videos = "";
-    this.selected = "";
+    this.videos = null;
+    this.selected = null;
     this.maxVideos = 5;
   }
 
@@ -28,12 +28,12 @@ class Music {
 
   async youtube(group) {
     this.group = group.toLowerCase();
-    const resp = await fetch(`${this.getURL()}&key=${Y2B_KEY2}&q=${group}`);
+    const resp = await fetch(`${this.getURL()}&key=${Y2B_KEY}&q=${group}`);
     const data = await resp.json();
     this.videos = data.items;
     this.selected = this.videos[0];
     this.renderThumbnails();
-    this.renderSelected();
+    this.renderSelected(this.selected);
     const btn = document.querySelector(`button[data-group*="${this.group}"]`);
     activateGroupBtn(btn);
   }
@@ -41,16 +41,16 @@ class Music {
   selectVideo(e) {
     const videoId = e.target.closest(".thumbnail").dataset.id;
     this.selected = this.videos.find((video) => video.id.videoId === videoId);
-    this.renderSelected();
+    this.renderSelected(this.selected);
   }
 
-  renderSelected() {
+  renderSelected(selected) {
     const iframeElem = document.querySelector(".selected__container");
     if (iframeElem) iframeElem.remove();
     const maxTitleSize = 30;
-    const videoId = this.selected.id.videoId;
-    const title = this.selected.snippet.title.slice(0, maxTitleSize) + "...";
-    const publishedAt = this.selected.snippet.publishedAt;
+    const videoId = selected.id.videoId;
+    const title = selected.snippet.title.slice(0, maxTitleSize) + "...";
+    const publishedAt = selected.snippet.publishedAt;
     const date = new Date(publishedAt);
     const month = months[date.getMonth()];
     const monthDay = date.getDate();

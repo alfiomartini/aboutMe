@@ -286,13 +286,14 @@ section {
 .thumbnail {
   width: var(--width-thumbnail);
   cursor: pointer;
-  height: 170px;
+  height: 190px;
 }
 
 .thumbnail img {
   width: 100%;
   height: 80%;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .selected {
@@ -417,12 +418,13 @@ footer {
 
   .thumbnails {
     grid-template-columns: 1fr;
-    width: 80%;
+    width: 95%;
     font-size: 14px;
   }
 
   .thumbnail {
-    width: auto;
+    width: 280px;
+    margin: 0 auto;
   }
 
   .group__btn {
