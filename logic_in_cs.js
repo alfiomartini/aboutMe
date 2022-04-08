@@ -30,8 +30,8 @@ const textsLogic = {
     `,
     ["Theorem Proving"]: `
       With respect to Interactive Theorem Proving,  I have experimented a bit with COQ and use extensively Isabelle/HOL for teaching and research experiments, most notably in the areas of formal semantics and program verification with Hoare Logic.
-      Amongst other approaches, I prefer Isabelle/HOL for two reasons: it has a nice language for writing proofs which is very similar to the informal english we use in
-      handwritten demonstrations, and it is also a powerful collection of libraries to help in automating those proofs, keeping the necessity of human collaboration to a minimum (if you are a seasoned user).
+      Amongst other approaches, I prefer Isabelle/HOL for two reasons: firstly, it has a nice language for writing proofs which is very similar to the informal English we use in
+      handwritten demonstrations. Secondly, there is also a powerful collection of libraries to help in automating those proofs, keeping the necessity of human collaboration to a minimum (as long as you are a seasoned user).
       `,
   },
   images: [
