@@ -27,7 +27,7 @@ const textsWebDev = {
     `,
     React: `
     React emphasizes the development of independent, reusable
-    components, which are comprised of their own render logic and styling. It is my favorite tool for web development,  but it requires a solid understanding of JavaScript. Not on only of the language itself, but to fully appreciate React, one
+    components, which are comprised of their own render logic and styling. It is my favorite tool for web development,  but it requires a solid understanding of JavaScript. Not only of the language itself, but to fully appreciate React, one
     has to have some experience in building pure JavaScript applications which require state management and rerendering of the user interface (or parts of it) whenever 
     the state is updated. In this case, things can become messy quite fast and then 
     one can truly appreciate the use of a tool like React (or something similar, like
