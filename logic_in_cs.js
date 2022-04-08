@@ -2,7 +2,7 @@ const textsLogic = {
   readme: {
     Overview: `
     I felt the need of having a solid background in Discrete Math and Logic for
-    Computer Science in the early 90's, when I discovered two classics in the area: "Laws of Programming" (Tony Hoare) and "Formal Languages and their Relation to
+    Computer Science in the early 90's, when I discovered two classics in the area: "Laws of Programming" (Tony Hoare, CACM - 1987) and "Formal Languages and their Relation to
     Automata" (Hopcroft & Hullmann, 1969). Later on, I had the same experience
     with Category Theory. Discrete Math, Logic and Category Theory were languages needed
     if you wanted access to the classics. A lot of Category Theory can be grasped and experimented in a practical way if you enjoy Functional Programming.
